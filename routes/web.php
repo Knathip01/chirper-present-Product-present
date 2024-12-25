@@ -1,5 +1,6 @@
 <?php
-use App\Http\Controllers\ChirpController; //กำหนดคอนโทนเรอร์
+use App\Http\Controllers\ChirpController; 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -13,13 +14,14 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-//ทำผ่านเล้าติ้งเพื่อเตรียมข้อมูล-> controller -> index
-// เพิ่ทรีซรอส เข้าไปเห็นindex กับ สโตร เลาติ้งวิ่งไปหาคอนโทนเริอ
+
 Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
-
+Route::resource('products', ProductController::class)
+    ->only(['index', 'show'])
+    ->middleware(['auth', 'verified']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

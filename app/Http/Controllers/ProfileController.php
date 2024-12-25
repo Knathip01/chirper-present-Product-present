@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+// หน้า  ล็อคอิน ล็อคเอา รหัสผ่าน
 use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;

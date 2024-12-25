@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { useForm, usePage } from '@inertiajs/react';
  
-dayjs.extend(relativeTime);
+dayjs.extend(relativeTime); //เวลา
  
 export default function Chirp({ chirp }) {
     const { auth } = usePage().props;

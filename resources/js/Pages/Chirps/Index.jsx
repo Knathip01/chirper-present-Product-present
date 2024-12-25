@@ -5,7 +5,7 @@ import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
 import { useForm, Head } from '@inertiajs/react';
  
-
+//ให้ผู้ใช้สามารถกรอกข้อความและโพสต์แสดงรายการโพสต์ทั้งหมดในรูปแบบที่ดูแลได้ง่ายใช้ Inertia.js เพื่อเชื่อมต่อ front-end กับ back-end สำหรับการจัดการฟอร์มและข้อมูล
 export default function Index({ auth, chirps }) {
     const { data, setData, post, processing, reset, errors } = useForm({
       message: '',

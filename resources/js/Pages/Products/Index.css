@@ -1,0 +1,151 @@
+
+/* พื้นหลังหลัก */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right top, #e30737, #e92871, #dd4fa3, #c471c8, #a58cdf, #8e9fee, #78b0f6, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* หัวข้อสินค้า */
+.product-header {  
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    font-size: 2.8rem; /* ขนาดตัวอักษรที่ใหญ่ขึ้นเล็กน้อย */
+    margin: 30px 0; /* ระยะห่างด้านบนและล่าง */
+    color: #a00411; /* สีตัวอักษร */
+    font-weight: bold; /* เพิ่มความหนาของตัวอักษร */
+    background: linear-gradient(90deg, #ff512f, #dd2476); /* ไล่เฉดสีให้ตัวอักษร */
+    -webkit-background-clip: text; /* ตัดพื้นหลังให้เฉพาะตัวอักษร */
+    -webkit-text-fill-color: transparent; /* ทำให้พื้นหลังแสดงแทนสีตัวอักษร */
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.2), /* เงาสีดำจาง */
+        2px 2px 6px rgba(255, 223, 0, 0.7), /* เงาสีเหลือง */
+        0 4px 8px rgba(255, 223, 0, 0.5); /* เงาสีเหลืองที่หนากว่า */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* เพิ่มการเคลื่อนไหว */
+}
+
+.product-header:hover {
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อโฮเวอร์ */
+    text-shadow: 
+        0 3px 6px rgba(0, 0, 0, 0.3), 
+        3px 3px 8px rgba(255, 223, 0, 0.9), 
+        0 6px 12px rgba(255, 223, 0, 0.8); /* เงาสว่างขึ้นเมื่อโฮเวอร์ */
+}
+
+
+
+/* รายการสินค้า */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* การ์ดสินค้า */
+.product-item {
+    background-color:  #d16ba5; /* เปลี่ยนสีพื้นหลังการ์ด */
+    border: 1px solid #ccc; /* ขอบการ์ดที่มีสีเข้มขึ้น */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f5c2d9; /* สีพื้นหลังเปลี่ยนเมื่อ hover */
+}
+
+/* รายละเอียดสินค้า */
+.product-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+    background-color: #fff; /* เพิ่มพื้นหลังขาวให้รายละเอียดสินค้า */
+}
+
+/* ปรับสีของชื่อสินค้า */
+.product-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* ปรับสีของรายละเอียดสินค้า */
+.product-description {
+    font-size: 1rem;
+    color: #777; /* สีเทาอ่อน */
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ปรับสีของราคา */
+.product-price {
+    font-size: 1.3rem;
+    color: #ff5722; /* สีส้มสดใสสำหรับราคาสินค้า */
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* ลิงก์สินค้า */
+.product-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #A8EB12; /* เปลี่ยนสีปุ่มเป็นสีเขียว */
+    color: #111104;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+    width: 80%;
+    text-align: center;
+}
+
+.product-link:hover {
+    background-color: #ff5722; /* สีปุ่มเมื่อ hover */
+    transform: scale(1.05);
+}
+
+
+/* กรอบรูปภาพ */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: auto; /* ความสูงคงที่ */
+    border: 2px solid #D16BA5;
+    border-radius: 20px;
+    background-color: #5FFBF1;
+}
+
+/* การกำหนดขนาดและการจัดตำแหน่งรูปภาพภายในกรอบ */
+.image-container img {
+    width: 100%; /* ปรับขนาดรูปภาพให้เต็มความกว้างคอนเทนเนอร์ */
+    height: 100%; /* ให้สูงเต็มกรอบ */
+    object-fit: cover; /* ให้ภาพครอบกรอบโดยไม่บิดเบือน */
+    display: block;
+}
+
+.image-container img {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อโฮเวอร์ */
+}
+

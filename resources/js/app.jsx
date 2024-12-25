@@ -1,3 +1,5 @@
+
+//โค้ดนี้คือการกำหนดค่าแอปพลิเคชันในเชิงโครงสร้าง (modular configuration) เพื่อแยกการตั้งค่า routing, middleware, และข้อยกเว้นให้อยู่ในที่เดียวกัน
 import '../css/app.css';
 import './bootstrap';
 

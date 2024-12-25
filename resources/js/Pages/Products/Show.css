@@ -1,0 +1,91 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); /* พื้นหลังแบบไล่เฉดสี */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; /* สีตัวอักร */
+}
+
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* ปุ่ม Back to All Products */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff; /* สีข้อความ */
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #ff5722, #e64a19, #d84315); /* พื้นหลังไล่เฉดสี */
+    border-radius: 5px; /* มุมโค้งมน */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงา */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงเมื่อ hover */
+}
+
+.back-link:hover {
+    background-image: linear-gradient(to bottom, #e64a19, #d84315, #b71c1c); /* สีพื้นหลังเมื่อ hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* เพิ่มเงาเมื่อ hover */
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ hover */
+}
+
+.back-link:active {
+    background-image: linear-gradient(to bottom, #d84315, #b71c1c, #9e1c1c); /* สีพื้นหลังเมื่อกด */
+    transform: scale(0.95); /* ย่อเล็กน้อยเมื่อกด */
+}
+
+

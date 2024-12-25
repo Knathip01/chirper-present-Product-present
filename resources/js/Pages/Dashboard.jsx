@@ -1,6 +1,6 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
-
+//แสดงหน้า Dashboard แบบเรียบง่ายพร้อมข้อความยืนยันการล็อกอิน
 export default function Dashboard() {
     return (
         <AuthenticatedLayout
